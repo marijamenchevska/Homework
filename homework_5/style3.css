@@ -1,0 +1,93 @@
+/* Not useful for situations like these, you have to translate elements from their intended HTML position, even if the elements above them have been moved. Box-sizing: border-box is more intuitive/easier to deal with. */
+
+.v3-container {
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    padding: 3px 7px 6px 7px;
+    box-shadow: 0 0 10px 1px rgb(226, 224, 224);
+}
+
+.v3-picture-edges {
+    box-sizing: border-box;
+    width: 431px;
+    height: 438px;
+}
+
+#v3-first-rectangle {
+    box-sizing: inherit;
+    width: 110px;
+    height: 144px;
+    transform: translate(0,0);
+    border-width: 4px 5px 10px 5px;
+    border-style: solid;
+    border-color: rgb(69, 58, 54);
+    background-color: rgb(254, 249, 230);
+}
+
+#v3-second-rectangle {
+    box-sizing: inherit;
+    width: 110px;
+    height: 175px;
+    transform: translate(0,0);
+    border-width: 10px 5px 5px 5px;
+    border-style: solid;
+    border-color: rgb(69, 58, 54);
+    background-color: rgb(254, 249, 230);
+}
+
+#v3-third-rectangle {
+    box-sizing: inherit;
+    width: 321px;
+    height: 321px;
+    transform: translate(110px,-319px);
+    border-width: 4px 4px 4px 5px;
+    border-style: solid;
+    border-color: rgb(69, 58, 54);
+    background-color:rgb(236, 73, 56);
+}
+
+#v3-fourth-rectangle {
+    box-sizing: inherit;
+    width: 110px;
+    height: 119px;
+    transform: translate(0,-321px);
+    border-width: 5px 5px 4px 5px;
+    border-style: solid;
+    border-color: rgb(69, 58, 54);
+    background-color: rgb(64, 156, 197);
+}
+
+#v3-fifth-rectangle {
+    box-sizing: inherit;
+    width: 297px;
+    height: 118px;
+    transform: translate(110px,-439px);
+    border-width: 4px 5px 5px 5px;
+    border-style: solid;
+    border-color: rgb(69, 58, 54);
+    background-color:rgb(254, 249, 230);
+}
+
+#v3-sixth-rectangle {
+    box-sizing: inherit;
+    width: 24px;
+    height: 59px;
+    transform: translate(407px,-557px);
+    border-width: 4px 4px 10px 5px;
+    border-style: solid;
+    border-color: rgb(69, 58, 54);
+    background-color: rgb(254, 249, 230);
+}
+
+#v3-seventh-rectangle {
+    box-sizing: inherit;
+    width: 24px;
+    height: 59px;
+    transform: translate(407px,-557px);
+    border-width: 10px 4px 4px 5px;
+    border-style: solid;
+    border-color: rgb(69, 58, 54);
+    background-color: yellow;
+}
