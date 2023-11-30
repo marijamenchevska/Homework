@@ -1,0 +1,266 @@
+.paragraph {
+    text-align: center;
+    font-size: 20px;
+}
+
+* {
+    font-family: 'Vina Sans', sans-serif;
+}
+
+.bonus-container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.131fr 0.122fr 0.122fr 0.264fr 0.150fr 0.150fr 0.061fr;
+    grid-template-rows: 0.109fr 0.285fr 0.283fr 0.126fr 0.110fr 0.051fr 0.036fr;
+    grid-template-areas: 'one one two two three three four'
+                         'six nine nine nine ten ten four'
+                         'seven nine nine nine eleven twelve four'
+                         'seven thirteen thirteen fifteen eighteen eighteen four'
+                         'eight thirteen thirteen sixteen nineteen nineteen five'
+                         'eight fourteen fourteen seventeen nineteen nineteen five'
+                         'eight fourteen fourteen twenty twenty twenty five';
+    background-color: black;
+    gap: 10px;
+    box-shadow: 0 0 10px 1px rgb(226, 224, 224);
+
+}
+
+.display-table {
+    display: table;
+ }
+ 
+ .display-table:hover > span {
+    display: table-cell;
+ }
+
+ span {
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+ }
+
+#bonus-rectangle1 {
+    grid-area: one;
+    background-color: rgb(229, 238, 235);
+}
+
+#bonus-rectangle1:hover {
+    background-color: rgb(175, 240, 218);
+}
+
+#bonus-rectangle2 {
+    grid-area: two;
+    background-color: rgb(242, 231, 213);
+}
+
+#bonus-rectangle2:hover {
+    background-color: rgb(238, 209, 162);
+}
+
+#bonus-rectangle3 {
+    grid-area: three;
+    background-color:rgb(242, 201, 104);
+}
+
+#bonus-rectangle3:hover {
+    background-color: rgb(238, 178, 82);
+}
+
+#bonus-rectangle4 {
+    grid-area: four;
+    background-color: rgb(252, 253, 231);
+}
+
+#bonus-rectangle4:hover {
+    background-color: rgb(247, 253, 134);
+}
+
+#bonus-rectangle5 {
+    grid-area: five;
+    background-color:rgb(215, 54, 48);
+}
+
+#bonus-rectangle5:hover {
+    background-color: rgb(192, 12, 6);
+}
+
+#bonus-rectangle6 {
+    grid-area: six;
+    background-color: rgb(251, 253, 231);
+}
+
+#bonus-rectangle6:hover {
+    background-color: rgb(241, 253, 112);
+}
+
+#bonus-rectangle7 {
+    grid-area: seven;
+    background-color: rgb(225, 234, 229);
+}
+
+#bonus-rectangle7:hover {
+    background-color: rgb(157, 238, 193);
+}
+
+#bonus-rectangle8 {
+    grid-area: eight;
+    background-color: rgb(244, 198, 90);
+}
+
+#bonus-rectangle8:hover {
+    background-color: rgb(247, 183, 33);
+}
+
+#bonus-rectangle9 {
+    grid-area: nine;
+    background-color: rgb(214, 45, 36);
+}
+
+#bonus-rectangle9:hover {
+    background-color: rgb(194, 10, 1);
+}
+
+#bonus-rectangle10 {
+    grid-area: ten;
+    background-color: rgb(237, 204, 107);
+}
+
+#bonus-rectangle10:hover {
+    background-color: rgb(236, 185, 31);
+}
+
+#bonus-rectangle11 {
+    grid-area: eleven;
+    background-color: rgb(223, 229, 208);
+}
+
+#bonus-rectangle11:hover {
+    background-color: rgb(198, 226, 128);
+}
+
+#bonus-rectangle12 {
+    grid-area: twelve;
+    background-color: rgb(242, 238, 226);
+}
+
+#bonus-rectangle12:hover {
+    background-color: rgb(243, 218, 143);
+}
+
+#bonus-rectangle13 {
+    grid-area: thirteen;
+    background-color: rgb(19, 4, 9);
+}
+
+#bonus-rectangle13:hover {
+    background-color: rgb(43, 37, 39);
+    color: white;
+}
+
+#bonus-rectangle14 {
+    grid-area: fourteen;
+    background-color: rgb(227, 222, 217);
+}
+
+#bonus-rectangle14:hover {
+    background-color: rgb(228, 201, 175);
+}
+
+#bonus-rectangle15 {
+    grid-area: fifteen;
+    background-color: rgb(192, 191, 186);
+}
+
+#bonus-rectangle15:hover span {
+    background-color: rgb(148, 147, 143);
+}
+
+#bonus-rectangle16 {
+    grid-area: sixteen;
+    background-color: rgb(222, 226, 212);
+}
+
+#bonus-rectangle16:hover {
+    background-color: rgb(207, 231, 146);
+}
+
+#bonus-rectangle17 {
+    grid-area: seventeen;
+    background-color: rgb(11, 2, 5);
+}
+
+#bonus-rectangle17:hover {
+    background-color: rgb(29, 26, 27);
+    color: white;
+}
+
+#bonus-rectangle18 {
+    grid-area: eighteen;
+    background-color: rgb(214, 222, 224);
+}
+
+#bonus-rectangle18:hover {
+    background-color: rgb(159, 214, 228);
+}
+
+#bonus-rectangle19 {
+    grid-area: nineteen;
+    background-color: rgb(36, 23, 133);
+}
+
+#bonus-rectangle19:hover {
+    background-color: rgb(66, 56, 139);
+    color: white;
+}
+
+#bonus-rectangle20 {
+    grid-area: twenty;
+    background-color: rgb(224, 224, 223);
+}
+
+#bonus-rectangle20:hover {
+    background-color: rgb(228, 228, 134);
+}
+
+@media screen and (width <= 480px) {
+    .bonus-container {
+        width: 480px;
+        height: 467px;
+    }
+}
+
+@media screen and (480px < width <= 768px) {
+    .bonus-container {
+        width: 534px;
+        height: 519px;
+    }
+}
+
+@media screen and (768px < width <= 1024px) {
+    .bonus-container {
+        width: 600px;
+        height: 583px;
+    }
+}
+
+@media screen and (1024px < width <= 1200px) {
+    .bonus-container {
+        width: 650px;
+        height: 632px;
+    }
+}
+
+@media screen and (width > 1200px) {
+        .bonus-container {
+            width: 750px;
+            height: 729px;
+        }
+}
+
+
+
+
+
+
+
+
