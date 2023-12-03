@@ -1,0 +1,200 @@
+.container {
+    margin: 50px auto;
+    width: 690px;
+    height: 216px;
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr;
+    border: 3px solid black;
+    font-size: 9px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: #faebe9;
+}
+
+.container:hover {
+    .border, #cover1, #rotator, #ball, #cover2 {
+        animation-play-state: paused;
+    }
+}
+
+.top-left {
+    background-color: #dd4838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-container {
+    width: 86px;
+    height: 16px;
+    display: inherit;
+    flex-direction: column;
+    background-color: #e84c3c;
+}
+
+.border {
+    height: 15%;
+    width: 86px;
+    background: linear-gradient(to left, #e84c3c 50%, #faebe9 50%);
+    background-size: 200% 100%;
+    animation: borders 8.5s ease-in-out 1s infinite;
+}
+
+@keyframes borders {
+    0% {
+        background-position: right;
+        opacity: 100%;
+    }
+
+    70% {
+        background-position: left;
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.top-right {
+    background-color: #e84c3c;
+    display: grid;
+    place-items: center;
+}
+
+.right-container {
+    width: 86px;
+    height: 11px;
+    background-color: #ee7162;
+    position: relative;
+}
+
+#cover1 {
+    background-color: #ffffff;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    animation: cover1 8.5s ease-in-out 1s infinite;
+}
+
+@keyframes cover1 {
+    0% {
+        width: 0;
+        opacity: 100%;
+    }
+
+    70% {
+        width: 100%;
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: -1;
+    }
+}
+
+.bottom-left {
+    background-color: #e84c3c;
+    padding: 51px 155px;
+}
+
+#rotator {
+    width: 35px;
+    height: 6px;
+    display: flex;
+    justify-content: space-between;
+    animation: rotate 0.85s linear 0.4s infinite;
+}
+
+.circles {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fda197;
+}
+
+.circles:nth-child(2) {
+    background-color: #fff4f2;
+}
+
+@keyframes rotate {
+    50%, 100% {
+        transform: rotate(180deg);
+    }
+}
+
+.bottom-right {
+    background-color: #dd4838;
+}
+
+.bottom-container {
+    height: 35.5px;
+    width: 35.5px;
+    margin: 36.25px 154.75px;
+    position: relative;
+}
+
+.square { /* Can't use flex or grid to center cover2 and square because filling-up of cover2 starts from the middle of the square */
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 7.75px;
+    left: 7.75px;
+    background-color: #e36d61;
+}
+
+#cover2 { /* Must use position:absolute instead of relative, otherwise divs won't overlap */
+    width: 0.1px;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    animation: cover2 8.4s ease-in-out 1s infinite;
+}
+
+@keyframes cover2 {
+    0% {
+        transform: scaleX(1);
+        opacity: 100%;
+    }
+
+    70% {
+        transform: scaleX(24);
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#ball {
+    height: 5.5px;
+    width: 5.5px;
+    background-color: #fffefe;
+    border-radius: 50%;
+    position: absolute;
+    animation: roll 1.88s ease-in infinite;
+}
+
+@keyframes roll {
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translateX(30px);
+    }
+
+    50% {
+        transform: translate(30px, 30px);
+    }
+
+    75% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
